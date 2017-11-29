@@ -40,7 +40,7 @@ namespace PumpingConsole
                     return (false);
                 }
                 //--- loading manager API
-                if ((res = SMTManagerAPIFactory.Initialize(@"..\..\..\..\lib\")) != MTRetCode.MT_RET_OK)
+                if ((res = SMTManagerAPIFactory.Initialize(@"..\..\..\..\..\..\..\lib\")) != MTRetCode.MT_RET_OK)
                 {
                     message = string.Format("Loading manager API failed ({0})", res);
                     return (false);
