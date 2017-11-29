@@ -165,7 +165,7 @@ namespace PumpingConsole
             base.Release();
         }
 
-        void Stop()
+        public void Stop()
         {
             //--- if manager interface was created
             if (m_manager != null)
@@ -189,6 +189,8 @@ namespace PumpingConsole
                 m_thread_dealer.Join(Timeout.Infinite);
                 m_thread_dealer = null;
             }
+
+            m_manager.Disconnect();
         }
 
         void Shutdown()

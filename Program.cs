@@ -15,6 +15,8 @@ namespace PumpingConsole
             dealer.Start("server", 0, "pass");
 
             Console.Read();
+
+            dealer.Stop();
         }
     }
 }
